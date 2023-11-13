@@ -7,7 +7,7 @@ const port = 3217;
 
 app.use(express.static('public')); // 정적 파일 서비스
 
-app.get('/', (req,res)=> {
+app.get('/login', (req,res)=> {
   fs.readFileSync(__dirname +'.public/index.html')
 })
 
