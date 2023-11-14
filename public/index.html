@@ -10,8 +10,8 @@
     #side { height: 100vh; position: absolute; font-size: 30px;}
     #sideHead{ width: 300px; height: 10vh; display: flex; flex-direction: row;}
     #header { width: 100vw; height:10vh;}
-    #loginBox{display: flex; flex-direction:column; flex-wrap: wrap; }
-
+    #loginBox{display: flex; flex-direction:column; flex-wrap: wrap;  }
+    #sideSpread{ width: 100px; height: 80px; font-size: 30px;}
   </style>
 </head>
 <body>
@@ -43,13 +43,13 @@
     function updateUI() {
       if (sideStateData.isActive) {
         side.style.width = "0px;"
-        title.textContent = "상태가 활성화되어 있습니다";
-        title.style.color = "green";
+        button.textContent = "nomal";
+        button.style.color = "green";
 
       } else {
         side.style.width = "300px;"
-        title.textContent = "상태가 비활성화되어 있습니다";
-        title.style.color = "red"
+        button.textContent = "expert";
+        button.style.color = "red"
       }
     }
     updateUI() // 초기 UI 설정
