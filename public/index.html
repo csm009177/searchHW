@@ -10,7 +10,7 @@
     #side { height: 100vh; position: absolute; font-size: 30px;}
     #sideHead{ width: 300px; height: 10vh; display: flex; flex-direction: row;}
     
-    #sideSpread{ width: 100px; height: 80px; font-size: 30px;}
+    #modeToggle{ width: 100px; height: 80px; font-size: 30px;}
     
     #header { width: 100vw; height:10vh;}
     #loginBox{display: flex; flex-direction:column; flex-wrap: wrap;  }
@@ -21,7 +21,7 @@
     <div id="side" style="background-color: darkgray;">
       <div id="sideHead">
         <h1 id="title" style="color:green">KIKITI</h1>
-        <button type="button" id="sideSpread"></button>
+        <button type="button" id="modeToggle"></button>
       </div>
     </div>
     <div id="header">
@@ -31,7 +31,7 @@
   <script>
     let sideStateData = { isActive : false };
     
-    const button = document.getElementById("sideSpread");
+    const button = document.getElementById("modeToggle");
     const title = document.getElementById("title");
     const side = document.getElementById("side")
     button.addEventListener('click', function() {
