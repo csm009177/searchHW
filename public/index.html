@@ -57,6 +57,21 @@
       }
     }
     updateUI() // 초기 UI 설정
+
+    // 재귀함수 
+    function chngColor(){
+      setTimeout(function() {
+        button.textContent = "nomal";
+        title.style.color = "red"
+        setTimeout(function() {
+        button.textContent = "nomal";
+        title.style.color = "green"
+        chngColor()
+      }, 100)
+      }, 100)
+    }
+    chngColor()
+    
   </script>
 </body>
 </html>
