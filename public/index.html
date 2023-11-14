@@ -47,13 +47,12 @@
         side.style.width = "0px;"
         button.textContent = "nomal";
         button.style.color = "green";
-        title.style.color = "green"
 
       } else {
         side.style.width = "300px;"
         button.textContent = "expert";
         button.style.color = "red"
-        title.style.color = "red"
+
       }
     }
     updateUI() // 초기 UI 설정
@@ -61,14 +60,12 @@
     // 재귀함수 
     function chngColor(){
       setTimeout(function() {
-        button.textContent = "nomal";
         title.style.color = "red"
         setTimeout(function() {
-        button.textContent = "nomal";
         title.style.color = "green"
         chngColor()
-      }, 100)
-      }, 100)
+      }, 10)
+    }, 10)
     }
     chngColor()
     
