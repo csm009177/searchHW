@@ -9,9 +9,11 @@
     #root { width: 100vw; height: 100vh; }
     #side { height: 100vh; position: absolute; font-size: 30px;}
     #sideHead{ width: 300px; height: 10vh; display: flex; flex-direction: row;}
+    
+    #sideSpread{ width: 100px; height: 80px; font-size: 30px;}
+    
     #header { width: 100vw; height:10vh;}
     #loginBox{display: flex; flex-direction:column; flex-wrap: wrap;  }
-    #sideSpread{ width: 100px; height: 80px; font-size: 30px;}
   </style>
 </head>
 <body>
@@ -19,7 +21,7 @@
     <div id="side" style="background-color: darkgray;">
       <div id="sideHead">
         <h1 id="title" style="color:green">KIKITI</h1>
-        <button id="sideSpread"> >> </button>
+        <button type="button" id="sideSpread"></button>
       </div>
     </div>
     <div id="header">
@@ -45,11 +47,13 @@
         side.style.width = "0px;"
         button.textContent = "nomal";
         button.style.color = "green";
+        title.style.color = "green"
 
       } else {
         side.style.width = "300px;"
         button.textContent = "expert";
         button.style.color = "red"
+        title.style.color = "red"
       }
     }
     updateUI() // 초기 UI 설정
