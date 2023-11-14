@@ -7,17 +7,52 @@
   <style>
     *{margin: 0; padding:0; box-sizing: border-box;}
     #root { width: 100vw; height: 100vh; }
+    #side { height: 100vh; position: absolute; font-size: 30px;}
+    #sideHead{ width: 300px; height: 10vh; display: flex; flex-direction: row;}
     #header { width: 100vw; height:10vh;}
     #loginBox{display: flex; flex-direction:column; flex-wrap: wrap; }
 
   </style>
 </head>
 <body>
-  <div id="root" style="background-color: black;">
+  <div id="root" style="background-color: gray">
+    <div id="side" style="background-color: darkgray;">
+      <div id="sideHead">
+        <h1 id="title" style="color:green">KIKITI</h1>
+        <button id="sideSpread"> >> </button>
+      </div>
+    </div>
     <div id="header">
       <div id="loginBox" style="width: 10vw; height: 10vh;"></div>
     </div>
   </div>
-  <script></script>
+  <script>
+    let sideStateData = { isActive : false };
+    
+    const button = document.getElementById("sideSpread");
+    const title = document.getElementById("title");
+    const side = document.getElementById("side")
+    button.addEventListener('click', function() {
+      if(sideStateData.isActive) {
+        sideStateData.isActive = false;
+      } else {
+        sideStateData.isActive = true;
+      }
+      updateUI();
+    });
+    function updateUI() {
+      if (sideStateData.isActive) {
+        side.style.width = "0px;"
+        title.textContent = "상태가 활성화되어 있습니다";
+        title.style.color = "green";
+
+      } else {
+        side.style.width = "300px;"
+        title.textContent = "상태가 비활성화되어 있습니다";
+        title.style.color = "red"
+      }
+    }
+    updateUI() // 초기 UI 설정
+  </script>
 </body>
 </html>
